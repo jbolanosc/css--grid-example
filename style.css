@@ -1,0 +1,52 @@
+body {
+    font-family: Avenir, sans-serif;
+    margin: 2rem auto;
+    width: 95%;
+  }
+  h2,
+  p {
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display:grid;
+    grid-auto-rows: minmax(125px, auto);
+    grid-gap: .5rem;
+  }
+
+  li{
+      color: #fff;
+  }
+
+  .boxes li {
+    background-image:
+      linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)),
+      url('./Cocos-Island-Whale-Shark.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  @media screen and (min-width: 40em) {
+    .boxes {
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 2px;
+    }
+
+    .boxes li:nth-child(1) {
+        grid-column: 1 / -1;
+        grid-row: span 3;
+      }
+
+      .boxes li:nth-child(2) {
+        grid-column: span 2;
+        grid-row: span 7;
+      }
+    
+      .boxes li:nth-child(3) {
+        grid-column: span 4;
+        grid-row: span 3;
+      }
+  }
